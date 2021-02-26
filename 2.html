@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/three.min.js"></script>
+  <script src="js/panolens.min.js"></script>
+  <style>
+  html,body {height: 100%;}
+  #test { width: 100%; height: 90%; outline: 1px solid red; }
+  </style>
+</head>
+<body>
+  <div id="test"></div>
+  <script>
+  const panorama = new PANOLENS.ImagePanorama('pano2.jpg');
+  const viewer = new PANOLENS.Viewer({
+    container: document.getElementById('test'),
+  });
+  viewer.add( panorama );
+  </script>
+</body>
+</html>
